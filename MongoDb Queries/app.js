@@ -422,3 +422,48 @@
 ///////////////////////////////////////////////
 //CRUD => Deleting Documents
 ///////////////////////////////////////////////
+// amazon> db.products.find()
+// [
+//   {
+//     _id: ObjectId("6557351ca2e17dba19106d96"),
+//     name: 'macbook',
+//     price: 1600,
+//     category: 'Computers',
+//     company: 'Apple'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d97"),
+//     name: 'iPhone 11',
+//     price: 900,
+//     category: 'Electronic'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d98"),
+//     name: 'Headphone',
+//     price: 100,
+//     category: 'Electronic'
+//   }
+// ]
+// amazon> db.products.remove({name:"macbook"})
+// DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+// { acknowledged: true, deletedCount: 1 }
+// amazon> db.products.find()
+// [
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d97"),
+//     name: 'iPhone 11',
+//     price: 900,
+//     category: 'Electronic'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d98"),
+//     name: 'Headphone',
+//     price: 100,
+//     category: 'Electronic'
+//   }
+// ]
+// amazon> db.products.deleteMany({category:"Electronic"})
+// { acknowledged: true, deletedCount: 2 }
+// amazon> db.products.find()
+
+// amazon>
