@@ -16,5 +16,9 @@ Open CMD and run **mongosh**
 
 
 ## CRUD => Updating Documents
+![image](https://github.com/Asavei16/MongoDB_CRUD_Operations/assets/57408487/7a66c25e-19de-49e4-9b2f-f8fefb580def)
+![image](https://github.com/Asavei16/MongoDB_CRUD_Operations/assets/57408487/973bdc16-6253-4cfd-b088-9aa42da61339)
+![image](https://github.com/Asavei16/MongoDB_CRUD_Operations/assets/57408487/4f00621b-2ed3-4bbc-8c3d-e41be118f107)
+
 
 ## CRUD => Deleting Documents
