@@ -1,0 +1,53 @@
+// Open CMD and run mongosh  (mongosh -> MongoDB Shell)
+
+///////////////////////////////////////////////
+// Creating & Deleting => Database & Collection
+///////////////////////////////////////////////
+
+// use amazon
+// db
+// show dbs
+//  -> admin   40.00 KiB
+//     config  84.00 KiB
+//     local   40.00 KiB
+// db.products.insert({name: "macbook"})
+//  ->{
+//     acknowledged: true,
+//     insertedIds: { '0': ObjectId("655723f93922a889a9bb2765") }
+//   }
+// show dbs
+// ->  admin   40.00 KiB
+//     amazon  40.00 KiB
+//     config  72.00 KiB
+//     local   40.00 KiB
+
+// show collections
+// -> products
+// -> users
+// db.users.drop()
+// -> true
+// show collections
+// -> products
+// db.dropDatabase()
+// ->{ ok: 1, dropped: 'amazon' }
+// show collections
+// admin   40.00 KiB
+// config  96.00 KiB
+// local   40.00 KiB
+
+
+///////////////////////////////////////////////
+//CRUD => Creating Documents
+///////////////////////////////////////////////
+
+///////////////////////////////////////////////
+//CRUD => Reading Documents
+///////////////////////////////////////////////
+
+///////////////////////////////////////////////
+//CRUD => Updating Documents
+///////////////////////////////////////////////
+
+///////////////////////////////////////////////
+//CRUD => Deleting Documents
+///////////////////////////////////////////////

@@ -1,0 +1,51 @@
+use amazon
+db
+show dbs
+db.dropDatabase()
+
+db.createCollection("products")
+show collections
+db.products.insert({"name" : "macbook pro"})
+db.products.drop()
+
+
+
+CREATING QUERIES
+
+db.products.insertOne({"name" : "macbook pro", "price" : 1500, "category" : "Computers"})
+db.products.insertMany([{"name" : "iPhone 11", "price" : 900, "category" : "Electronics"}, 
+							{"name" : "Headphone", "price" : 100, "category" : "Electronics"}])
+							
+							
+FINDING QUERIES
+
+db.products.find()
+db.products.find().pretty()
+db.products.find({name : "macbook"})
+db.products.find({category : "Computers"})
+
+db.products.find({},{"name":1})
+db.products.find({},{"name":1,_id:0})
+
+db.products.find({},{"name":1,_id:0}).limit(2)
+
+db.products.find({price : {$lt: 150} })
+db.products.find({price : {$lte: 100} })
+db.products.find({price : {$gt: 800} })
+db.products.find({price : {$gte: 900} })
+
+db.products.find({$and:[{price : {$lt: 200} },{category: "Electronics"}]})
+db.products.find({$or:[{price : {$gt: 500} },{category: "Electronics"}]})
+
+
+UPDATE QUERIES
+
+db.products.updateOne({name: "macbook pro"},{$set: {price: 1600} })
+db.products.updateOne({name: "macbook pro"},{$set: {company: "Apple"} })
+db.products.updateMany({category: "Electronics"},{$set: {category: "Electronic"} })
+
+
+DELETEING QUERIES
+
+db.products.remove({name: "iPhone 11"})
+db.products.deleteMany({price : {$lt: 250} })
