@@ -248,6 +248,176 @@
 ///////////////////////////////////////////////
 //CRUD => Updating Documents
 ///////////////////////////////////////////////
+// test> use amazon
+// switched to db amazon
+// amazon> db.products.find()
+// [
+//   {
+//     _id: ObjectId("6557351ca2e17dba19106d96"),
+//     name: 'macbook',
+//     price: 1500,
+//     category: 'Computers'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d97"),
+//     name: 'iPhone 11',
+//     price: 900,
+//     category: 'Electronics'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d98"),
+//     name: 'Headphone',
+//     price: 100,
+//     category: 'Electronics'
+//   }
+// ]
+// amazon> db.products.updateOne({name: "macbook"}, {$set: {price: 1600}})
+// {
+//   acknowledged: true,
+//   insertedId: null,
+//   matchedCount: 1,
+//   modifiedCount: 1,
+//   upsertedCount: 0
+// }
+// amazon> db.products.find()
+// [
+//   {
+//     _id: ObjectId("6557351ca2e17dba19106d96"),
+//     name: 'macbook',
+//     price: 1600,
+//     category: 'Computers'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d97"),
+//     name: 'iPhone 11',
+//     price: 900,
+//     category: 'Electronics'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d98"),
+//     name: 'Headphone',
+//     price: 100,
+//     category: 'Electronics'
+//   }
+// ]
+// amazon> db.products.updateOne({name: "Headphone"}, {$set: {category: "Electronics1"}})
+// {
+//   acknowledged: true,
+//   insertedId: null,
+//   matchedCount: 1,
+//   modifiedCount: 1,
+//   upsertedCount: 0
+// }
+// amazon> db.products.find()
+// [
+//   {
+//     _id: ObjectId("6557351ca2e17dba19106d96"),
+//     name: 'macbook',
+//     price: 1600,
+//     category: 'Computers'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d97"),
+//     name: 'iPhone 11',
+//     price: 900,
+//     category: 'Electronics'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d98"),
+//     name: 'Headphone',
+//     price: 100,
+//     category: 'Electronics1'
+//   }
+// ]
+// amazon> db.products.updateOne({name: "Headphone"}, {$set: {category: "Electronics"}})
+// {
+//   acknowledged: true,
+//   insertedId: null,
+//   matchedCount: 1,
+//   modifiedCount: 1,
+//   upsertedCount: 0
+// }
+// amazon> db.products.find()
+// [
+//   {
+//     _id: ObjectId("6557351ca2e17dba19106d96"),
+//     name: 'macbook',
+//     price: 1600,
+//     category: 'Computers'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d97"),
+//     name: 'iPhone 11',
+//     price: 900,
+//     category: 'Electronics'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d98"),
+//     name: 'Headphone',
+//     price: 100,
+//     category: 'Electronics'
+//   }
+// ]
+// amazon> db.products.updateOne({name: "macbook"}, {$set: {company: "Apple"}})
+// {
+//   acknowledged: true,
+//   insertedId: null,
+//   matchedCount: 1,
+//   modifiedCount: 1,
+//   upsertedCount: 0
+// }
+// amazon> db.products.find()
+// [
+//   {
+//     _id: ObjectId("6557351ca2e17dba19106d96"),
+//     name: 'macbook',
+//     price: 1600,
+//     category: 'Computers',
+//     company: 'Apple'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d97"),
+//     name: 'iPhone 11',
+//     price: 900,
+//     category: 'Electronics'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d98"),
+//     name: 'Headphone',
+//     price: 100,
+//     category: 'Electronics'
+//   }
+// ]
+// amazon> db.products.updateMany({category: "Electronics"}, {$set: {category: "Electronic"}})
+// {
+//   acknowledged: true,
+//   insertedId: null,
+//   matchedCount: 2,
+//   modifiedCount: 2,
+//   upsertedCount: 0
+// }
+// amazon> db.products.find()
+// [
+//   {
+//     _id: ObjectId("6557351ca2e17dba19106d96"),
+//     name: 'macbook',
+//     price: 1600,
+//     category: 'Computers',
+//     company: 'Apple'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d97"),
+//     name: 'iPhone 11',
+//     price: 900,
+//     category: 'Electronic'
+//   },
+//   {
+//     _id: ObjectId("655735a7a2e17dba19106d98"),
+//     name: 'Headphone',
+//     price: 100,
+//     category: 'Electronic'
+//   }
+// ]
 
 ///////////////////////////////////////////////
 //CRUD => Deleting Documents
