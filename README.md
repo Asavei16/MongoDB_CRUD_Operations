@@ -22,3 +22,4 @@ Open CMD and run **mongosh**
 
 
 ## CRUD => Deleting Documents
+![image](https://github.com/Asavei16/MongoDB_CRUD_Operations/assets/57408487/1069e224-a4db-49d3-892d-a79faa51d072)
